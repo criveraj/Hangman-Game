@@ -1,0 +1,56 @@
+.jumbotron {
+	background-color: #00665E;
+}
+
+.jumbotron
+{   
+background-size: cover;
+height:160px;
+width: 500px;
+ }
+.jumbotron h1 {
+	color:white;
+}
+.panel {
+	background-color: #00665E;
+	color: white;
+
+}
+
+p {
+	font-family: 'Calibri', 'Helvetica';
+}
+h1, h2, h3 {
+	font-family: 'Roboto Slab', serif;
+}
+h4 {
+	color: yellow;
+}
+h3 {
+	text-align: center;
+}
+#wordHolder{ 
+	margin-top:70px; 
+	margin-left:150px;  
+	}
+#guesses{ 
+	margin-top:50px; 
+	margin-left:150px; 
+	}
+#feedback{ 
+	margin-top:50px; 
+	margin-left:150px; 
+	font-size:24px; 
+	}
+
+/*.dashes{ 
+	height:40px;
+	width:40px;
+	float:left;
+	margin-right:10px;
+	background-color:white;
+	text-align:center;
+	font-size:24px;
+	olor:#333;
+	padding-top:5px;
+} */

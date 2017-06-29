@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game</title>
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Linking jQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+	<div class="col-sm-5">
+
+		<div class="jumbotron">
+			<h1>Hangman</h1>
+			<h2>Dog Breeds</h2>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<img src="assets/images/breeds.jpg">
+	</div>
+
+</div>	
+
+<div class="container">
+
+	<div class="row">
+			<div class="col-sm-5">
+			<div class="panel">
+					<div class="panel-heading"><h4>INSTRUCTIONS</h4>
+					</div>
+					<div class="panel-body">
+						<p> <strong>objective:</strong> Guess the word/phrase before your man gets hung!</p>
+						<p>The computer will select a random word.</p>
+						<p>The computer draws a number of dashes equivalent to the number of letters in the word</p> 
+						<p> Try to guess the word one letter at a time. If you suggests a letter that occurs in the word, the dashes will be replaced with the letter in the right places. If the word does not contain the suggested letter, you will loose an attempt (7 wrong answers) until the game ends. You win if you guess the word before loosing 7 attempts</p>	
+							
+						<h4>Press the SPACE BAR to start</h4>
+					</div>
+			</div>
+
+			</div>
+			<div class="col-sm-7">
+
+				<h3 id="WordtoGuess"> Word </h3>
+				<br>
+				<div id="dashes"></div>
+				<br>
+				<div id="letters" text center>
+					<p> You are guessing a <span id=numLetters>0</span> letters word
+					<br>
+					<br>
+					You have <span id="attempts"> </span> attempts left
+				</p>
+				</div>
+				
+							
+			</div>
+
+</div>
+	
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+
+ 
+</body>
+</html>
