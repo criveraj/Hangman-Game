@@ -4,36 +4,33 @@
 
       var dogs = [
 	      "Akita",
-	      "Alaskan",
 	      'Beagle',
-	      'Bloodhound',
-	      'Boxer',
-	      'Bulldog',
-	      'Chihuahua',
-	      'Chow Chow',
-	      'Collie',
-	      'Dachshund',
-	      'Dalmatian',
-	      'Doberman',
-	      'Mastiff',
-	      'Eskimo',
-	      'Foxhound',
-	      'Greyhound',
-	      'Husky',
-	      'Labrador',
-	      'Maltese',
-	      'Papillon',
-	      'Pekingese',
-	      'Pinscher',
-	      'Pit Bull',
-	      'Pomeranian',
-	      'Poodle',
-	      'Pug',
-	      'Rottweiler',
-	      'Schnauzer',
-	      'Setter',
-	      'Shepherd',
-	      'Terrier',
+	      'bloodhound',
+	      'boxer',
+	      'bulldog',
+	      'chihuahua',
+	      'collie',
+	      'dachshund',
+	      'dalmatian',
+	      'doberman',
+	      'mastiff',
+	      'eskimo',
+	      'foxhound',
+	      'greyhound',
+	      'husky',
+	      'labrador',
+	      'maltese',
+	      'papillon',
+	      'pekingese',
+	      'pinscher',
+	      'pomeranian',
+	      'poodle',
+	      'pug',
+	      'rottweiler',
+	      'schnauzer',
+	      'setter',
+	      'shepherd',
+	      'terrier',
       ];
 
       //$document.ready(function(){});
@@ -44,6 +41,7 @@
       var currentWord;
       var WrongGuess = 0;
       var wordInArray = [];
+      var word = [];
 
       //$('#game').append('<div id="wordHolder">current word</div>');
       //$('#game').append('<div id="guesses">Letters selected:</div>');
@@ -55,9 +53,10 @@
 
       function getWord(){
 	      var randomNumber = Math.floor(Math.random() * arrayLength);
-	      currentWord = dogs[randomNumber];
+	      currentWord = dogs[randomNumber].toLowerCase();
 	      console.log('in'+currentWord);
 	      wordInArray=currentWord.split("");
+
 	      }
   		//console.log('out' + currentWord);
   		console.log(wordInArray);
@@ -78,21 +77,25 @@
     console.log(wordInArray);
     var wordLength = wordInArray.length;
     dashesWord(wordLength);
+    document.getElementById("numLetters").innerHTML = wordLength;
+    document.getElementById("attempts").innerHTML = attemptsLeft;
+
     
    alert('press a key to start guessing'); 
 
     document.onkeyup = function(event) {
     	console.log(event.key);
-    	var userGuess = event.key;
+    	var userGuess = event.key.toLowerCase();
+
     	position=wordInArray.indexOf(userGuess);
     	console.log('first position of the letter'+ position);
 
     	if (position !== -1) {
-    		word[position]=userGuess;
+    		word[position]=userGuess.toUpperCase();
         position2=wordInArray.lastIndexOf(userGuess);
         console.log('second position of the letter'+ position2);
         if (position2 !== -1) {
-        word[position2]=userGuess;
+        word[position2]=userGuess.toUpperCase();
         }
         document.getElementById("dashes").innerHTML = word;
     	}
